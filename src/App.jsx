@@ -590,7 +590,9 @@ export default function SHCN() {
 
   const LOGO_PATHS = { fr:"/logos/SHCN-FR.png", kr:"/logos/SHCN-KR.png", en:"/logos/SHCN-EN.png", ln:"/logos/SHCN-LN.png" };
   const Logo = ({ size = 36 }) => (
-    <img src={LOGO_PATHS[lang]} alt={lang==="en"?"BCHS":"SHCN"} style={{height:size,width:"auto",display:"block"}}/>
+    <div style={{height:size,width:size*0.77,background:"#0a0a0a",display:"flex",alignItems:"center",justifyContent:"center",borderRadius:2,overflow:"hidden"}}>
+      <img src={LOGO_PATHS[lang]} alt={lang==="en"?"BCHS":"SHCN"} style={{height:size,width:"auto",display:"block"}}/>
+    </div>
   );
 
   useEffect(() => {
@@ -688,7 +690,7 @@ export default function SHCN() {
         <div style={{maxWidth:1180,margin:"0 auto",padding:"0 2rem",height:52,display:"flex",alignItems:"center",justifyContent:"space-between"}}>
           {/* Logo */}
           <a onClick={()=>scrollTo("home")} style={{cursor:"pointer",display:"flex",alignItems:"center",gap:8}}>
-            <Logo size={32}/>
+            <Logo size={40}/>
             <span className="pf" style={{fontSize:"1.2rem",fontWeight:800,color:p.primary,letterSpacing:".02em",lineHeight:1,transition:"color .4s"}}>{lang==="en"?"BCHS":"SHCN"}</span>
           </a>
 
@@ -1155,7 +1157,7 @@ export default function SHCN() {
           <div className="g2" style={{display:"grid",gridTemplateColumns:"1.3fr .7fr",gap:"3rem",alignItems:"start",marginBottom:"2rem"}}>
             <div>
               <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:".85rem"}}>
-                <Logo size={28}/>
+                <Logo size={36}/>
                 <span className="pf" style={{fontSize:"1.4rem",fontWeight:800,color:p.darkPrimary}}>{lang==="en"?"BCHS":"SHCN"}</span>
               </div>
               <p style={{fontSize:".65rem",fontWeight:600,letterSpacing:".12em",textTransform:"uppercase",color:"rgba(255,255,255,.2)",marginBottom:".15rem"}}>{t.footer.full}</p>
