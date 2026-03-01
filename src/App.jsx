@@ -688,7 +688,7 @@ export default function SHCN() {
         <div style={{maxWidth:1180,margin:"0 auto",padding:"0 2rem",height:52,display:"flex",alignItems:"center",justifyContent:"space-between"}}>
           {/* Logo */}
           <a onClick={()=>scrollTo("home")} style={{cursor:"pointer",display:"flex",alignItems:"center",gap:8}}>
-            <Logo size={40}/>
+            <Logo size={48}/>
             <span className="pf" style={{fontSize:"1.2rem",fontWeight:800,color:p.primary,letterSpacing:".02em",lineHeight:1,transition:"color .4s"}}>{lang==="en"?"BCHS":"SHCN"}</span>
           </a>
 
