@@ -589,10 +589,8 @@ export default function SHCN() {
   const p = PALETTES[lang];
 
   const LOGO_PATHS = { fr:"/logos/SHCN-FR.png", kr:"/logos/SHCN-KR.png", en:"/logos/SHCN-EN.png", ln:"/logos/SHCN-LN.png" };
-  const Logo = ({ size = 36 }) => (
-    <div style={{height:size,width:size*0.77,background:"#0a0a0a",display:"flex",alignItems:"center",justifyContent:"center",borderRadius:2,overflow:"hidden"}}>
-      <img src={LOGO_PATHS[lang]} alt={lang==="en"?"BCHS":"SHCN"} style={{height:size,width:"auto",display:"block"}}/>
-    </div>
+  const Logo = ({ size = 40 }) => (
+    <img src={LOGO_PATHS[lang]} alt={lang==="en"?"BCHS":"SHCN"} style={{height:size,width:"auto",display:"block"}}/>
   );
 
   useEffect(() => {
